@@ -21,6 +21,8 @@ const loadBookApi = () => {
     loadSpinner('block');
     // Search Result Off
     toggleResult('none', 'none');
+    // For Not Showing Error Previously
+    document.getElementById('not-found').style.display = 'none';
 }
 // Output Function for Data
 const showResult = (resultData, resultFound) => {
@@ -34,7 +36,9 @@ const showResult = (resultData, resultFound) => {
     // Condition For Error Message
     const showNotFoundMSG = document.getElementById('not-found');
     if (totalFoundResult === 0) {
+        document.getElementById('not-found').style.display = 'block';
         showNotFoundMSG.innerText = 'No Result Found...!!!';
+        loadSpinner('none');
     } else {
         showNotFoundMSG.textContent = '';
         // Declaring loop For Each Items
