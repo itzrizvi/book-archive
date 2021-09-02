@@ -3,8 +3,8 @@ const loadSpinner = displaying => {
     document.getElementById('spinner').style.display = displaying;
 }
 // Search Result Display
-const toggleResult = (forsearch, forCount) => {
-    document.getElementById('book-list-container').style.display = forsearch;
+const toggleResult = (forSearch, forCount) => {
+    document.getElementById('book-list-container').style.display = forSearch;
     document.getElementById('result-found').style.display = forCount;
 }
 // Loading API With Function
